@@ -3,10 +3,15 @@
 # 猜對的話 印出'出於猜對了'
 # 猜錯的話 印出'比答案大/小'
 # 開始計數
+# 讓使用者決定數字範圍
 
 import random # 載入隨機模組
+start = input('請決定隨機數字開始值: ')
+end = input('請決定隨機數字結束值: ')
+start = int(start)
+end = int(end)
 
-r = random.randint(1, 100) #用函式產生隨機數
+r = random.randint(start, end) #用函式產生隨機數
 count = 0 # 不能寫在迴圈裡面，不然會一直歸零
 while True:
 	count += 1 # count = count = count + 1
